@@ -1,0 +1,137 @@
+.cabeçalho__menu-hamburger{
+    width: 24px;
+    height: 24px;
+    background-image: url("../imagens/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.cabeçalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-items:center;
+    
+}
+
+.container__imagem{
+    padding: 1em;
+
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top:100%;
+    width: 65vw;
+    
+}
+
+.container__botao:checked ~ .lista-menu{
+    display: block;
+    
+}
+
+.lista-menu__titulo,.lista-menu__item{
+    padding: 1em;
+    background: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-family: var(--fonte1);
+    font-weight: 700;  
+    font-style: normal;
+}
+
+.lista-menu__link{
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    font-family: var(--fonte1);
+    font-weight: 400;  
+    font-style:normal;
+}
+
+.container__botao{
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .cabeçalho__titulo, .cabeçalho__titulo--negrito{
+        font-family: var(--fonte2);
+        font-size: 30px;
+        padding-left: 0.3em ;
+        padding-top: 0.5em;
+
+    }
+    .cabeçalho__titulo{
+        font-size: 26px;
+        font-weight: 400;
+    }
+    .cabeçalho__titulo--negrito{
+        font-weight: 700;
+    }
+    .opçoes{
+        display: flex;
+        gap: 1em;
+        
+    }
+    .opçoes__item{
+        text-transform: uppercase;
+        padding: 0 1em;
+    }
+    .opçoes__link{
+        text-decoration: none;
+        color:var(--preto);
+        
+    }
+
+    .imagens-menu{
+        padding-right:1.5em;
+        gap:1.5em;
+    }
+
+    .container__imagem-transparente{
+        display: none;
+    }
+    .opçoes-botao:checked ~.lista-menu{
+        display: block  ;
+        width: auto;
+        align-self: center;
+    }
+    
+    .cabeçalho__menu-hamburger{
+        display: none;
+    }
+
+    .logo-cabeçalho{
+        padding-left: 1em;
+    }
+    
+    .opçoes-botao{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .cabeçalho__titulo{
+        display: none;
+    }
+    .opçoes{
+        display: none;
+    }
+
+    
+    
+}
