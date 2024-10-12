@@ -91,7 +91,6 @@
     }
     .card__descriçao{
         display: flex;
-        
         font-size: 24px;
         justify-content: center;
     }
@@ -103,7 +102,6 @@
         width: 100%;
     }
     .card__botoes{
-        
         justify-content: center;
     }
     .saiba-mais{
@@ -123,5 +121,41 @@
         margin: 2em auto;
         width: 60%;
     }
-    
+    .saiba-mais:hover{
+        background-color: var(--laranja-hover);
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .card{
+        width:60vh;
+        height: 18em;
+        
+    }
+    .card__descriçao{
+        align-items: center;
+        height: 10em;
+    }
+
+    .descrição{
+        width: 18em;
+        gap: 0.5em;
+        margin-bottom: 1em;
+        
+    }
+    .descrição__imagem{
+        width: 9em;
+        align-self: flex-start;
+        padding-left: 2em;
+        
+        height: 9em;
+    }
+    .saiba-mais{
+        margin-left: 19vh;
+        
+    }
+    .card__botoes{
+        gap:2em;
+    }
+
 }

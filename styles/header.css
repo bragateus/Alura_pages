@@ -5,6 +5,7 @@
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: var(--azul-degrade);
 
 }
 
@@ -62,12 +63,32 @@
     font-weight: 400;  
     font-style:normal;
 }
+.cabeçalho__titulo, .opçoes{
+    display: none;
+}
 
 .container__botao{
     display: none;
 }
 
+.container__texto{
+    display: none;
+}
+
+.container__botao:checked ~ .container__rotulo > .cabeçalho__menu-hamburger{
+    background: url(../imagens/Menu\ Aberto.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--azul-degrade);
+}
+
+.container__botao:checked ~ .container__rotulo {
+    background: var(--azul-degrade);
+}
+
+
 @media screen and (min-width:1024px) {
+
     .cabeçalho__titulo, .cabeçalho__titulo--negrito{
         font-family: var(--fonte2);
         font-size: 30px;
@@ -76,7 +97,8 @@
 
     }
     .cabeçalho__titulo{
-        font-size: 26px;
+        display: block;
+        font-size: 28px;
         font-weight: 400;
     }
     .cabeçalho__titulo--negrito{
@@ -102,7 +124,7 @@
         gap:1.5em;
     }
 
-    .container__imagem-transparente{
+    .container__imagem-transparente, .cabeçalho__menu-hamburger, .opçoes-botao{
         display: none;
     }
     .opçoes-botao:checked ~.lista-menu{
@@ -110,28 +132,67 @@
         width: auto;
         align-self: center;
     }
-    
-    .cabeçalho__menu-hamburger{
-        display: none;
-    }
-
     .logo-cabeçalho{
         padding-left: 1em;
     }
-    
-    .opçoes-botao{
-        display: none;
+    .opçoes-botao:checked ~ .opçoes__rotulo > .opçoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+        
     }
+    .opçoes__item{
+        padding: 2em 2em;
+        gap:0;
+        
+    }
+    .lista-menu__item:hover{
+        background: var(--azul-degrade);
+        border-bottom: 5px solid var(--cinza-claro);
+    }
+    .lista-menu__item:hover > .lista-menu__link{
+        /* usei assim pq pra aplicar a cor azul la na fonte tive q usar o webkit, e so assim pra alterar para branco */
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+    .opçoes__item:hover{
+        background: var(--azul-degrade);
+        color: var(--branco);
+        
+
+    }
+    .opçoes__item:hover > .opçoes__link{
+        color: var(--branco);
+    }
+    .container__texto:hover{
+        text-decoration:underline;
+    }
+    
 }
 
-@media screen and (max-width:1023px) {
-    .cabeçalho__titulo{
-        display: none;
+
+@media screen and (min-width:1440px) {
+    .container__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
     }
+    .cabeçalho{
+        padding: 0 2em;
+    }
+
     .opçoes{
-        display: none;
+        margin-right: auto;
+        padding-left: 2em;
     }
 
-    
-    
+    .cabeçalho__titulo{
+        padding-left: 0;
+    }
+    .container__texto{
+        display: block;
+    }
 }
+
+
+

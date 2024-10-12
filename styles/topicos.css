@@ -35,14 +35,18 @@
     .topicos__link {
         font-size: 24px;
     }
+    .topicos__link:hover{
+        background-color: var(--laranja-hover);
+    }
 }
 
-@media screen and (min-width: 1023px) {
-    .tópicos__titulo {
-        font-size: 24px;
-    }
 
-    .tópicos__link {
-        font-size: 24px;
+@media screen and (min-width:1440px) {
+    .topicos__lista{
+        padding:0 15em 0 15em ;
+
+    }
+    .topicos__link {
+        font-size: 22px;
     }
 }

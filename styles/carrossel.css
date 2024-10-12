@@ -12,10 +12,7 @@
 }
 
 .swiper-pagination{
-    
     padding: 0.5em;
-
-
 }
 
   .swiper-slide img {
@@ -42,3 +39,20 @@
         padding-top: 1em;
     }
 }
+
+@media screen and (min-width:1440px) {
+    
+    .carrossel__container{
+        display: flex;
+        margin:0 5vw 3em 5vw;
+        align-items: center;
+        gap:2em
+    }
+
+    .swiper{
+        width:95%;
+        padding-top: 1em;
+    }
+    
+}
+

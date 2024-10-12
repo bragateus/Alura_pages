@@ -18,8 +18,10 @@
     --azul: #002f52;
     --ativo: :checked;
     --preto: black;
-    --cinza: rgb(231, 231, 231);
+    --cinza: rgb(163, 163, 163);
     --cinza-texto:#7d7d7d;
+    --cinza-claro: #dbdbdb;
+    --laranja-hover:#fc7123;
 }
 
 body{
